@@ -1,8 +1,10 @@
 0x16. C - Simple Shell
 
-This is a project that deals with building a simple shell
-Requirements
-General
+This is a project that deals with building a simple linux shell
+
+
+GENERAL REQUIREMENT
+
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 All your files should end with a new line
