@@ -6,7 +6,7 @@
  *  Return: 0
  */
 
-int ma_history(info_t *stat)
+int ma_history(stat_t *stat)
 {
 	getList(stat->history);
 	return (0);
@@ -20,7 +20,7 @@ int ma_history(info_t *stat)
  * Return: 0 on success, 1 on error
  */
 
-int ma_alias(info_t *stat, char *string)
+int ma_alias(stat_t *stat, char *string)
 {
 	char *ptr, b;
 	int den;
@@ -44,7 +44,7 @@ int ma_alias(info_t *stat, char *string)
  * Return: 0 on success, 1 on error
  */
 
-int get_alias(info_t *stat, char *string)
+int get_alias(stat_t *stat, char *string)
 {
 	char *ptr;
 
@@ -89,7 +89,7 @@ int pt_alias(list_t *list)
  *  Return: 0
  */
 
-int mic_alias(info_t *stat)
+int mic_alias(stat_t *stat)
 {
 	int k = 0;
 	char *ptr = NULL;

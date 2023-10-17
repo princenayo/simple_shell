@@ -1,16 +1,16 @@
 #include "shell.h"
 
 /**
- * _checkout - function that exits the shell
+ * _checkout -function that exits the shell
  * @stat: Structure containing potential arguments.
- *
- *  Return: given exit status (0) if info.argv[0] != "exit"
+
+ *  Return: given exit status
+ *         (0) if info.argv[0] != "exit"
  */
 
 
-int _checkout(info_t *stat)
+int _checkout(stat_t *stat)
 {
-
 	int check;
 
 	if (stat->argv[1])
@@ -39,7 +39,7 @@ int _checkout(info_t *stat)
  *  Return: Always 0
  */
 
-int _change(info_t *stat)
+int _change(stat_t *stat)
 {
 	char *str, *den, buffer[1024];
 	int chdir_ret;
@@ -90,7 +90,7 @@ int _change(info_t *stat)
  *  Return: 0
  */
 
-int _mylove(info_t *stat)
+int _mylove(stat_t *stat)
 {
 	char **args;
 

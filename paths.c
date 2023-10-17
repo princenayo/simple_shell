@@ -7,7 +7,7 @@
  * Return: 1 if true, 0 otherwise
  */
 
-int det_exec(info_t *info, char *path)
+int det_exec(stat_t *info, char *path)
 {
 	struct stat st;
 
@@ -50,7 +50,7 @@ char *duplicate_chars(char *pStr, int startdex, int stopdex)
  * Return: full path of cmd if found or NULL
  */
 
-char *f_cmd_path(info_t *stat, char *pStr, char *cmd)
+char *f_cmd_path(stat_t *stat, char *pStr, char *cmd)
 {
 	int k = 0, position = 0;
 	char *path;

@@ -38,7 +38,7 @@ int conv_string(char *str)
  *        -1 on error
  */
 
-void handle_error(info_t *stat, char *str)
+void handle_error(stat_t *stat, char *str)
 {
 	print_input(stat->fname);
 	print_input(": ");

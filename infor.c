@@ -6,7 +6,7 @@
  * return: void
  */
 
-void init_info(info_t *stat)
+void init_info(stat_t *stat)
 {
 	stat->argv = NULL;
 	stat->arg = NULL;
@@ -20,7 +20,7 @@ void init_info(info_t *stat)
  * @argv: argument vector
  */
 
-void grab_info(info_t *stat, char **argv)
+void grab_info(stat_t *stat, char **argv)
 {
 	int k = 0;
 
@@ -51,7 +51,7 @@ void grab_info(info_t *stat, char **argv)
  * @n: let it be true if freeing all fields
  */
 
-void info_freed(info_t *stat, int n)
+void info_freed(stat_t *stat, int n)
 {
 	free_string(stat->argv);
 	stat->argv = NULL;

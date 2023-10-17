@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-char **my_environ(info_t *stat)
+char **my_environ(stat_t *stat)
 {
 	if (!stat->environ || stat->env_changed)
 	{
@@ -24,7 +24,7 @@ char **my_environ(info_t *stat)
  * @den: the string env var property
  */
 
-int my_unsetenv(info_t *stat, char *den)
+int my_unsetenv(stat_t *stat, char *den)
 {
 	list_t *list = stat->env;
 	size_t k = 0;
@@ -57,7 +57,7 @@ int my_unsetenv(info_t *stat, char *den)
  *  Return: Always 0
  */
 
-int my_setenv(info_t *stat, char *den, char *data)
+int my_setenv(stat_t *stat, char *den, char *data)
 {
 	char *buf = NULL;
 	list_t *list;

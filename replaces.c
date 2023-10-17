@@ -8,7 +8,7 @@
  * Return: 1 if chain delimeter, 0 otherwise
  */
 
-int chain_delim(info_t *stat, char *buf, size_t *ptr)
+int chain_delim(stat_t *stat, char *buf, size_t *ptr)
 {
 	size_t h = *ptr;
 
@@ -45,7 +45,7 @@ int chain_delim(info_t *stat, char *buf, size_t *ptr)
  * Return: Void
  */
 
-void chain_status(info_t *stat, char *buf, size_t *ptr, size_t k, size_t n)
+void chain_status(stat_t *stat, char *buf, size_t *ptr, size_t k, size_t n)
 {
 	size_t h = *ptr;
 
@@ -74,7 +74,7 @@ void chain_status(info_t *stat, char *buf, size_t *ptr, size_t k, size_t n)
  * Return: 1 if replaced, else 0
  */
 
-int alias_replacement(info_t *stat)
+int alias_replacement(stat_t *stat)
 {
 
 	list_t *node;
@@ -105,7 +105,7 @@ int alias_replacement(info_t *stat)
  * Return: 1 if replaced, 0 otherwise
  */
 
-int var_replacement(info_t *stat)
+int var_replacement(stat_t *stat)
 {
 	int k = 0;
 	list_t *node;

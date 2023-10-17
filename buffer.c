@@ -8,7 +8,7 @@
  * Return: bytes read
  */
 
-ssize_t chain_buf(info_t *stat, char **buf, size_t *lenght)
+ssize_t chain_buf(stat_t *stat, char **buf, size_t *lenght)
 {
 	ssize_t p = 0;
 	size_t width = 0;
@@ -52,7 +52,7 @@ ssize_t chain_buf(info_t *stat, char **buf, size_t *lenght)
  * Return: bytes read
  */
 
-ssize_t getline_minus(info_t *stat)
+ssize_t getline_minus(stat_t *stat)
 {
 	static char *buf;
 	static size_t i, j, len;
@@ -96,7 +96,7 @@ ssize_t getline_minus(info_t *stat)
  * Return: r
  */
 
-ssize_t rd_buffer(info_t *stat, char *buf, size_t *k)
+ssize_t rd_buffer(stat_t *stat, char *buf, size_t *k)
 {
 	ssize_t p = 0;
 
@@ -116,7 +116,7 @@ ssize_t rd_buffer(info_t *stat, char *buf, size_t *k)
  * Return: s
  */
 
-int next_line(info_t *stat, char **ptr, size_t *count)
+int next_line(stat_t *stat, char **ptr, size_t *count)
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;

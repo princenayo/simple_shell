@@ -7,7 +7,7 @@
  * Return: 0 on success, 1 on error, or error code
  */
 
-int dsh(info_t *stat, char **ds)
+int dsh(stat_t *stat, char **ds)
 {
 	ssize_t k = 0;
 	int builtin = 0;
@@ -52,7 +52,7 @@ int dsh(info_t *stat, char **ds)
  *-2 if builtin signals exit()
  */
 
-int cmd_builtin(info_t *stat)
+int cmd_builtin(stat_t *stat)
 {
 	int k, built_ret = -1;
 	builtin_table builtintbl[] = {
@@ -83,7 +83,7 @@ int cmd_builtin(info_t *stat)
  * Return: 0
  */
 
-void get_cmd(info_t *stat)
+void get_cmd(stat_t *stat)
 {
 	char *path = NULL;
 	int j, h;
@@ -124,7 +124,7 @@ void get_cmd(info_t *stat)
  * Return: 0
  */
 
-void _fork(info_t *stat)
+void _fork(stat_t *stat)
 {
 	pid_t cpid;
 

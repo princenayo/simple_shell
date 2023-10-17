@@ -6,7 +6,7 @@
  * Return: 1 if interactive mode, 0 otherwise
  */
 
-int interest(info_t *stat)
+int interest(stat_t *stat)
 {
 	return (isatty(STDIN_FILENO) && stat->readfd <= 2);
 }

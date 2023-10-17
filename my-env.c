@@ -7,7 +7,7 @@
  * Return: Always 0
  */
 
-int print_env(info_t *stat)
+int print_env(stat_t *stat)
 {
 	get_node_str(stat->env);
 	return (0);
@@ -20,7 +20,7 @@ int print_env(info_t *stat)
  * Return: the value of env
  */
 
-char *environ_var(info_t *stat, const char *nayo)
+char *environ_var(stat_t *stat, const char *nayo)
 {
 	list_t *node = stat->env;
 	char *ptr;
@@ -42,7 +42,7 @@ char *environ_var(info_t *stat, const char *nayo)
  * Return: 0 always
  */
 
-int init_env(info_t *stat)
+int init_env(stat_t *stat)
 {
 	if (stat->argc != 3)
 	{
@@ -61,7 +61,7 @@ int init_env(info_t *stat)
  *  Return: 0 always
  */
 
-int remove_env(info_t *stat)
+int remove_env(stat_t *stat)
 {
 	int k;
 
@@ -83,7 +83,7 @@ int remove_env(info_t *stat)
  * Return: 0 always
  */
 
-int pop_env(info_t *stat)
+int pop_env(stat_t *stat)
 {
 	list_t *node = NULL;
 	size_t k;

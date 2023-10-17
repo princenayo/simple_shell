@@ -6,7 +6,7 @@
  * Return: the string containg hist file
  */
 
-char *file_hist(info_t *stat)
+char *file_hist(stat_t *stat)
 {
 	char *buf, *rec;
 
@@ -32,7 +32,7 @@ char *file_hist(info_t *stat)
  * Return: 1 on success, otherwise -1
  */
 
-int create_hist(info_t *stat)
+int create_hist(stat_t *stat)
 {
 	ssize_t fd;
 	char *file = file_hist(stat);
@@ -61,7 +61,7 @@ int create_hist(info_t *stat)
  * Return: histcount on success, 0 otherwise
  */
 
-int _readHist(info_t *stat)
+int _readHist(stat_t *stat)
 {
 	int k, last = 0, linecount = 0;
 	ssize_t fd, rdlen, numb = 0;
@@ -115,7 +115,7 @@ int _readHist(info_t *stat)
  * Return: 0 always
  */
 
-int _buildHist(info_t *stat, char *buf, int linecount)
+int _buildHist(stat_t *stat, char *buf, int linecount)
 {
 	list_t *node = NULL;
 
@@ -133,7 +133,7 @@ int _buildHist(info_t *stat, char *buf, int linecount)
  * Return: histcount
  */
 
-int history_renum(info_t *stat)
+int history_renum(stat_t *stat)
 {
 	list_t *node = stat->history;
 	int k = 0;
